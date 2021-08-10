@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тестовое задание Cart Power</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__top">
+                    <div class="header__location location">
+                        <p class="location__name "><i class="far__location fas fa-map-marker-alt"></i>Нижний Новгород</p>
+                    </div>
+                    <nav class="header__menu">
+                        <ul class="menu">
+                            <li class="menu__item"><a class="menu__link" href="#">Как заказать</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Доставка и оплата</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Кредит и рассрочка</a></li>
+                            <li class="menu__item"><a class="menu__link" href="#">Сборка</a></li>
+                            <li class="menu__item menu__question accordion-item">
+                                <div class="accordion-item__trigger" >
+                                    <a class="menu__link" href="#">Частые вопросы</a>
+                                </div>
+                                <div class="accordion-item__content">
+                                    <p class="accordion-content__item"><a href="" class="accordion__link">О нас</a></p>
+                                    <p class="accordion-content__item"><a href="" class="accordion__link">Отзывы</a></p>
+                                    <p class="accordion-content__item"><a href="" class="accordion__link">Гарантии</a></p>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__contacts">
+                        <a href="tel:83472926252" class="header__phone header__link">+7 (347) 292-62-52</a>
+                    </div>
+                </div>
+                <div class="header__bottom">
+                    <a href="#" class="header__logo--link">
+                        <img class="header__logo" src="image/Logo.png" alt="logo" >
+                    </a>
+                    <div class="header__search search">
+                        <a href="#" class="catalog__link"><span class="search__catalog">Каталог</span></a> 
+                        <input placeholder="Например, двухъярусная кровать" type="search" class="search__input">
+                        <i class="fas__search fas fa-search"></i>
+                    </div>
+                    <ul class="header__profile">
+                        <li class="profile__item favorites">
+                            <a href="#" class="profile__link"><i class="far fa-heart"></i></a>
+                        </li>
+                        <li class="profile__item address">
+                            <a href="#" class="profile__link"><span class="profile__text">Адреса</span><i class="far__address fas fa-map-marker-alt"></i></a>
+                        </li>
+                        <li class="profile__item user">
+                            <a href="#" class="profile__link"><span class="profile__text">Профиль</span><i class="far__user far fa-user"></i></a>
+                        </li>
+                        <li class="profile__item cart">
+                            <a href="#" class="profile__link">
+                                <i class="fas__cart fas fa-shopping-cart"></i>
+                            <span class="cart__number">1</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="burger-menu">
+                        <a href="#" class="burger-menu__button">
+                        <span class="burger-menu__lines"></span>
+                        </a>
+                        <nav class="burger-menu__nav">
+                        <a href="#" class="burger-menu__link">Как заказать</a>
+                        <a href="#" class="burger-menu__link">Доставка и оплата</a>
+                        <a href="#" class="burger-menu__link">Кредит и рассрочка</a>
+                        <a href="#" class="burger-menu__link">Сборка</a>
+                        <a href="#" class="burger-menu__link">Частые вопросы</a>
+                        <a href="#" class="burger-menu__link">ВХОД</a>
+                        </nav>
+                        <div class="burger-menu__overlay"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="main">
+        <h1 class="visually-hidden">Главная страница мебельного магазина Test</h1>
+        <section class="section__intro">
+            <div class="container">
+                <div class="intro">
+                    <div class="intro__breadcrumbs">
+                        <ul class="breadcrumbs__nav">
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link">Главная</a> 
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link">Все коллекции</a>
+                            </li>
+                            <li class="breadcrumbs__item">
+                                <a href="#" class="breadcrumbs__link">Альба</a>
+                            </li>
+                            <li class="breadcrumbs__item breadcrumbs__item--active">
+                                <a href="#" class="breadcrumbs__link">Спальня</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <h2 class="intro__title">Спальня</h2>
+                    <h3 class="intro__subtitle">Спальня коллекции Альба</h3>
+                </div>
+            </div>
+        </section>
+        <section class="section__gallery section">
+            <div class="container">
+                <div class="gallery">
+                    <h2 class="section__title">Фотографии и видео</h2>
+                    <div class="gallery__slider slider__gallery">
+                        <div class="block__slider-gallery"></div>
+                        <div class="block__slider-gallery block__slider-gallery--play"></div>
+                        <div class="block__slider-gallery"></div>
+                        <div class="block__slider-gallery"></div>
+                        <div class="block__slider-gallery"></div>
+                        <div class="block__slider-gallery"></div>
+                    </div>
+                    <p class="gallery__text"> Представляем вашему вниманию спальный гарнитур «Натали» Он выполнен в классическом стиле с элементами аристократии и роскоши. В комплект входят: кровать, прикроватные тумбы, несколько вариантов шкафов и комод с зеркалом. Обратите внимание, все модули комплекта вы можете приобрести по отдельности. Коллекция «Натали» может быть выполнена в двух цветах: в темном оттенке «Орех», а также в более светлом решении «Клен Ясень Бежевый» Рекомендуем Вам обязательно посмотреть видео спальни, гостиной и прихожей из коллекции «Натали». 
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="section__compilation section">
+            <div class="container">
+                <div class="compilation">
+                    <div class="section__title">Подборка один</div>
+                    <div class="compilation__wrapper">
+                        <sidebar class="compilation__sidebar">
+                            <form class="compilation__sidebar">
+                                <div class="widget__body">
+                                    <label class="checkbox">
+                                        <span class="checkbox__title">Кровать «Триумф» 160</span>
+                                        <div class="checkbox__wrapper">
+                                            <span class="checkbox__price">8 000 ₽ </span>
+                                            <input
+                                            type="checkbox"
+                                            checked
+                                            class="checkbox__real"
+                                            name="w1"
+                                            />
+                                            <span class="checkbox__fake"></span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox">
+                                        <span class="checkbox__title">Матрас средний</span>
+                                        <div class="checkbox__wrapper">
+                                            <span class="checkbox__price">10 000 ₽ </span>
+                                            <input type="checkbox" class="checkbox__real" name="w1" />
+                                            <span class="checkbox__fake"></span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox">
+                                        
+                                        <span class="checkbox__title">Тумба прикроватная</span>
+                                        <div class="checkbox__wrapper">
+                                            <span class="checkbox__price">2 000 ₽  </span>
+                                            <input type="checkbox" class="checkbox__real" name="w1" />
+                                            <span class="checkbox__fake"></span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox">
+                                        <span class="checkbox__title">Шкаф 4-дверный</span>
+                                        <div class="checkbox__wrapper">
+                                            <span class="checkbox__price">2 000 ₽  </span>
+                                            <input type="checkbox" class="checkbox__real" name="w1" />
+                                            <span class="checkbox__fake"></span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox">
+                                        <span class="checkbox__title">Комод</span>
+                                        <div class="checkbox__wrapper">
+                                            <span class="checkbox__price">2 000 ₽  </span>
+                                            <input type="checkbox" class="checkbox__real" name="w1" />
+                                            <span class="checkbox__fake"></span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox">
+                                        <span class="checkbox__title">Зеркало</span>
+                                        <div class="checkbox__wrapper">
+                                            
+                                        </div>
+                                        <div class="checkbox__wrapper">
+                                            <span class="checkbox__price">2 000 ₽  </span>
+                                            <input type="checkbox" class="checkbox__real" name="w1" />
+                                            <span class="checkbox__fake"></span>
+                                        </div>
+                                    </label>
+                                    <label class="checkbox">
+                                        <span class="checkbox__title">Пуф</span>
+                                        <div class="checkbox__wrapper">
+                                            <span class="checkbox__price">2 000 ₽  </span>
+                                            <input type="checkbox" class="checkbox__real" name="w1" />
+                                            <span class="checkbox__fake"></span>
+                                        </div>
+                                    </label>
+                                    <div class="widget__total">
+                                        <p class="total__name">Итого</p>
+                                        <span class="total__price">2 000 ₽ </span>
+                                    </div>
+                                </div>
+                                <button class="btn widget__btn">Добавить товары в корзину</button>
+                            </form>
+                        </sidebar>
+                        <div class="compilation__slider">
+                            <div class="card__item">
+                                <img class="card__top" src="image/block-card.png" alt="" >
+                                <div class="card__bottom">
+                                    <img class="card__star" src="image/star.png" alt="star">
+                                    <h3 class="card__title">Кровать «Триумф»</h3>
+                                    <div class="card__price">8 000 ₽ </div>
+                                    <button class="card__btn btn">В корзину</button>
+                                </div>
+                            </div>
+                            <div class="card__item">
+                                <img class="card__top" src="image/block-card.png" alt="" >
+                                <div class="card__bottom">
+                                    <img class="card__star" src="image/star.png" alt="star">
+                                    <h3 class="card__title">Кровать «Триумф»</h3>
+                                    <div class="card__price">8 000 ₽ </div>
+                                    <button class="card__btn btn">В корзину</button>
+                                </div>
+                            </div>
+                            <div class="card__item">
+                                <img class="card__top" src="image/block-card.png" alt="" >
+                                <div class="card__bottom">
+                                    <img class="card__star" src="image/star.png" alt="star">
+                                    <h3 class="card__title">Кровать «Триумф»</h3>
+                                    <div class="card__price">8 000 ₽ </div>
+                                    <button class="card__btn btn">В корзину</button>
+                                </div>
+                            </div>
+                            <div class="card__item">
+                                <img class="card__top" src="image/block-card.png" alt="" >
+                                <div class="card__bottom">
+                                    <img class="card__star" src="image/star.png" alt="star">
+                                    <h3 class="card__title">Кровать «Триумф»</h3>
+                                    <div class="card__price">8 000 ₽ </div>
+                                    <button class="card__btn btn">В корзину</button>
+                                </div>
+                            </div>
+                            <div class="card__item">
+                                <img class="card__top" src="image/block-card.png" alt="" >
+                                <div class="card__bottom">
+                                    <img class="card__star" src="image/star.png" alt="star">
+                                    <h3 class="card__title">Кровать «Триумф»</h3>
+                                    <div class="card__price">8 000 ₽ </div>
+                                    <button class="card__btn btn">В корзину</button>
+                                </div>
+                            </div>
+                            <div class="card__item">
+                                <img class="card__top" src="image/block-card.png" alt="" >
+                                <div class="card__bottom">
+                                    <img class="card__star" src="image/star.png" alt="star">
+                                    <h3 class="card__title">Кровать «Триумф»</h3>
+                                    <div class="card__price">8 000 ₽ </div>
+                                    <button class="card__btn btn">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <div class="section__card section">
+            <div class="container">
+                <div class="section__title">Для спальни</div>
+                <div class="card__slider">
+                    <div class="card__item sale">
+                        <span class="sale__number">-10%</span>
+                        <img class="card__top" src="image/block-card.png" alt="" >
+                        <div class="card__bottom">
+                            <img class="card__star" src="image/star.png" alt="star">
+                            <h3 class="card__title">Кровать «Триумф»</h3>
+                            <p class="sale__price">18 000 ₽ </p>
+                            <p class="card__price">8 000 ₽ </p>
+                            <button class="card__btn btn">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="card__item sale">
+                        <span class="sale__number">-10%</span>
+                        <img class="card__top" src="image/block-card.png" alt="" >
+                        <div class="card__bottom">
+                            <img class="card__star" src="image/star.png" alt="star">
+                            <h3 class="card__title">Кровать «Триумф»</h3>
+                            <p class="sale__price">18 000 ₽ </p>
+                            <div class="card__price">8 000 ₽ </div>
+                            <button class="card__btn btn">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="card__item sale">
+                        <span class="sale__number">-10%</span>
+                        <img class="card__top" src="image/block-card.png" alt="" >
+                        <div class="card__bottom">
+                            <img class="card__star" src="image/star.png" alt="star">
+                            <h3 class="card__title">Кровать «Триумф»</h3>
+                            <p class="sale__price">18 000 ₽ </p>
+                            <div class="card__price">8 000 ₽ </div>
+                            <button class="card__btn btn">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="card__item sale">
+                        <span class="sale__number">-10%</span>
+                        <img class="card__top" src="image/block-card.png" alt="" >
+                        <div class="card__bottom">
+                            <img class="card__star" src="image/star.png" alt="star">
+                            <h3 class="card__title">Кровать «Триумф»</h3>
+                            <p class="sale__price">18 000 ₽ </p>
+                            <div class="card__price">8 000 ₽ </div>
+                            <button class="card__btn btn">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="card__item sale">
+                        <span class="sale__number">-10%</span>
+                        <img class="card__top" src="image/block-card.png" alt="" >
+                        <div class="card__bottom">
+                            <img class="card__star" src="image/star.png" alt="star">
+                            <h3 class="card__title">Кровать «Триумф»</h3>
+                            <p class="sale__price">18 000 ₽ </p>
+                            <div class="card__price">8 000 ₽ </div>
+                            <button class="card__btn btn">В корзину</button>
+                        </div>
+                    </div>
+                    <div class="card__item sale">
+                        <span class="sale__number">-10%</span>
+                        <img class="card__top" src="image/block-card.png" alt="" >
+                        <div class="card__bottom">
+                            <img class="card__star" src="image/star.png" alt="star">
+                            <h3 class="card__title">Кровать «Триумф»</h3>
+                            <p class="sale__price">18 000 ₽ </p>
+                            <div class="card__price">8 000 ₽ </div>
+                            <button class="card__btn btn">В корзину</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__top">
+                <h2 class="footer__title">Сайт рыбатекст поможет дизайнеру, верстальщику</h2>
+                <p class="footer__text">Оставьте заявку и мы пришлем вам ссылку</p>
+                <form action="#" class="footer__form" id="form">
+                    <div class="form__item">
+                        <label class="form__inner form__user" for="text"> </label>
+                        <input id="text" class="form__text form__input _req" name="name" type="text" placeholder="Ваше имя">
+                        <span class="errors"></span>
+                    </div>
+                    <div class="form__item">
+                        <label class="form__inner form__tel" for="tel"></label>
+                        <input id="tel" class="form__text form__input _req" name="tel" type="tel" placeholder="Ваш телефон">
+                    </div>
+                    <div class="form__item">
+                        <label class="form__inner form__mail" for="email"></label>
+                        <input id="email" class="form__text form__email-text _email form__text--email _req" name="email" type="email" placeholder="Ваша почта">
+                    </div>
+                    
+                    <button type="submit" class="form__btn">Подписаться</button>
+                </form>
+            </div>
+            <div class="footer__bottom">
+                <div class="footer__bottom-right">
+                    <ul class="footer__item">
+                        <li class="footer__items"><a href="#" class="footer__link">О нас</a></li>
+                        <li class="footer__items"><a href="#" class="footer__link">Как сделать заказ</a></li>
+                        <li class="footer__items"><a href="" class="footer__link">Доставка</a></li>
+                        <li class="footer__items"><a href="#" class="footer__link">Гарантия</a></li>
+                        <li class="footer__items"><a href="#" class="footer__link">Сборка</a></li>
+
+                    </ul>
+                    <ul class="footer__item">
+                        <li class="footer__items"><a href="#" class="footer__link">Адреса магазинов</a></li>
+                        <li class="footer__items"><a href="#" class="footer__link">Вакансии</a></li>
+                        <li class="footer__items"><a href="#" class="footer__link">Блог</a></li>
+                        <li class="footer__items"><a href="#" class="footer__link">Отзывы</a></li>
+                    </ul>
+                </div>
+                <div class="footer__bottom-left">
+                    <ul class="footer__social">
+                        <li class="social__items"><a href="#" class="social__link">Инстаграм</a></li>
+                        <li class="social__items"><a href="#" class="social__link">Фейсбук</a></li>
+                        <li class="social__items"><a href="#" class="social__link">Вконтакте</a></li>
+                        <li class="phone"><a class="footer__phone footer__link" href="tel:83472926252" >+7 (347) 292-62-52</a></li>
+                        <li class="email footer__link">info@mebelhol.ru </li>
+                    </ul>  
+                </div>
+            </div>
+            <ul class="footer__copyright">
+                <li class="copyright__items">Политика конфиденциальности</li>
+                <li class="copyright__items--gray">2020, МебельХолл. Все права защищены</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/75666df409.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

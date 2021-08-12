@@ -68,6 +68,11 @@
                         </li>
                     </ul>
                 </div>
+                <div class="header__search--mobile search">
+                    <a href="#" class="catalog__link"><span class="search__catalog">Каталог</span></a> 
+                    <input placeholder="Например, двухъярусная кровать" type="search" class="search__input">
+                    <i class="fas__search fas fa-search"></i>
+                </div>
                 <div class="burger-menu">
                         <a href="#" class="burger-menu__button">
                         <span class="burger-menu__lines"></span>
@@ -274,7 +279,7 @@
                     <div class="card__item sale">
                         <span class="sale__number">-10%</span>
                         <img class="card__top" src="image/block-card.png" alt="" >
-                        <div class="card__bottom">
+                        <div class="card__bottom card__bottom--gray">
                             <img class="card__star" src="image/star.png" alt="star">
                             <h3 class="card__title">Кровать «Триумф»</h3>
                             <p class="sale__price">18 000 ₽ </p>
@@ -285,7 +290,7 @@
                     <div class="card__item sale">
                         <span class="sale__number">-10%</span>
                         <img class="card__top" src="image/block-card.png" alt="" >
-                        <div class="card__bottom">
+                        <div class="card__bottom card__bottom--gray">
                             <img class="card__star" src="image/star.png" alt="star">
                             <h3 class="card__title">Кровать «Триумф»</h3>
                             <p class="sale__price">18 000 ₽ </p>
@@ -296,7 +301,7 @@
                     <div class="card__item sale">
                         <span class="sale__number">-10%</span>
                         <img class="card__top" src="image/block-card.png" alt="" >
-                        <div class="card__bottom">
+                        <div class="card__bottom card__bottom--gray">
                             <img class="card__star" src="image/star.png" alt="star">
                             <h3 class="card__title">Кровать «Триумф»</h3>
                             <p class="sale__price">18 000 ₽ </p>
@@ -307,7 +312,7 @@
                     <div class="card__item sale">
                         <span class="sale__number">-10%</span>
                         <img class="card__top" src="image/block-card.png" alt="" >
-                        <div class="card__bottom">
+                        <div class="card__bottom card__bottom--gray">
                             <img class="card__star" src="image/star.png" alt="star">
                             <h3 class="card__title">Кровать «Триумф»</h3>
                             <p class="sale__price">18 000 ₽ </p>
@@ -318,7 +323,7 @@
                     <div class="card__item sale">
                         <span class="sale__number">-10%</span>
                         <img class="card__top" src="image/block-card.png" alt="" >
-                        <div class="card__bottom">
+                        <div class="card__bottom card__bottom--gray">
                             <img class="card__star" src="image/star.png" alt="star">
                             <h3 class="card__title">Кровать «Триумф»</h3>
                             <p class="sale__price">18 000 ₽ </p>
@@ -329,7 +334,7 @@
                     <div class="card__item sale">
                         <span class="sale__number">-10%</span>
                         <img class="card__top" src="image/block-card.png" alt="" >
-                        <div class="card__bottom">
+                        <div class="card__bottom card__bottom--gray">
                             <img class="card__star" src="image/star.png" alt="star">
                             <h3 class="card__title">Кровать «Триумф»</h3>
                             <p class="sale__price">18 000 ₽ </p>
@@ -349,19 +354,21 @@
                 <form action="#" class="footer__form" id="form">
                     <div class="form__item">
                         <label class="form__inner form__user" for="text"> </label>
-                        <input id="text" class="form__text form__input _req" name="name" type="text" placeholder="Ваше имя">
+                        <input id="text" class="form__text form__input" name="name" type="text" placeholder="Ваше имя">
                         <span class="errors"></span>
                     </div>
                     <div class="form__item">
                         <label class="form__inner form__tel" for="tel"></label>
-                        <input id="tel" class="form__text form__input _req" name="tel" type="tel" placeholder="Ваш телефон">
+                        <input id="tel" class="form__text form__input" name="tel" type="tel" placeholder="Ваш телефон">
+                        <span class="errors"></span>
                     </div>
                     <div class="form__item">
                         <label class="form__inner form__mail" for="email"></label>
-                        <input id="email" class="form__text form__email-text _email form__text--email _req" name="email" type="email" placeholder="Ваша почта">
+                        <input id="email" class="form__text form__email-text form__text--email" name="email" type="email" placeholder="Ваша почта">
+                        <span class="errors"></span>
                     </div>
                     
-                    <button type="submit" class="form__btn">Подписаться</button>
+                    <button class="form__btn">Подписаться</button>
                 </form>
             </div>
             <div class="footer__bottom">

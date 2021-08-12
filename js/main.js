@@ -1,6 +1,6 @@
 "use strict"
 
-// бургер
+// Бургер меню
 
 function burgerMenu(selector) {
     let menu = $(selector);
@@ -28,7 +28,7 @@ function burgerMenu(selector) {
 
 burgerMenu ('.burger-menu');
 
-// меню частые вопросы
+// меню спойлер
 
 $(document).ready(function() {
     $('.accordion-item__trigger').click(function () {
@@ -36,7 +36,7 @@ $(document).ready(function() {
     });
 });
 
-// slider gallery
+// Слайдеры
 
 $(document).ready(function () {
     $(".slider__gallery").slick({
@@ -124,60 +124,72 @@ $(document).ready(function () {
     });
 });
 
-// валидация формы
+// Валидация формы
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form  = document.getElementById('form');
-    form.addEventListener('submit', formSend);
+document.addEventListener("DOMContentLoaded", () => {
+    "use strict"
 
-    async function formSend(e) {
-        e.preventDefault();
+    const form = document.querySelector(".footer__form");
 
-        let error = formValidate(form);
+    const regName = /^[a-z0-9_-]{3,16}$/;
+    const regTel = /^(\+7|7|8)?[\s\-]?\(?[489][0-9]{2}\)?[\s\-]?[0-9]{3}[\s\-]?[0-9]{2}[\s\-]?[0-9]{2}$/;
+    const regEmail = /^[A-Z0-9._%+-]+@[A-Z0-9-]+.+.[A-Z]{2,4}$/i;
 
-        if(error === 0) {
-
-        } else {
-            console.log('Заполните обязательные поля')
+    const validateElem = (elem) => {
+        if (elem.name ===  "name") {
+            if (!regName.test(elem.value) && elem.value !== "" ) {
+                elem.nextElementSibling.textContent = "Введите корректное имя";
+            } else {
+                elem.nextElementSibling.textContent = "";
+            }
+        }
+        if (elem.name ===  "tel") {
+            if (!regTel.test(elem.value) && elem.value !== "" ) {
+                elem.nextElementSibling.textContent = "Введите верный телефон";
+            } else {
+                elem.nextElementSibling.textContent = "";
+            }
+        }
+        if (elem.name ===  "email") {
+            if (!regEmail.test(elem.value) && elem.value !== "" ) {
+                elem.nextElementSibling.textContent = "Введите корректный email";
+            } else {
+                elem.nextElementSibling.textContent = "";
+            }
         }
 
+    };
+
+    for (let elem of form.elements) {
+        if (
+            !elem.classList.contains("form-check-input") &&
+            elem.tagName !== "BUTTON"
+        ) {
+            elem.addEventListener("blur", () => {
+                validateElem(elem);
+            });
+        }
     }
 
-    function formValidate(form) {
-        let error = 0;
-        let formReq = document.querySelectorAll('._req')
+    form.addEventListener("submit", (even) => {
+        even.preventDefault();
 
-        for (let index = 0; index < formReq.length; index++) {
-            const input = formReq[index];
-            formRemoveError(input);
-
-            if (input.classList.contains('_email')) {
-                if (emailTest(input)) {
-                    formAddError(input);
-                    error++;
-                } else {
-                    if (input.value === '') {
-                        formAddError(input);
-                        error++;
-                    }
+        for (let elem of form.elements) {
+            if (
+                !elem.classList.contains("form-check-input") &&
+                elem.tagName !== "BUTTON"
+            ) {
+                if (elem.value ===  "") {
+                    elem.nextElementSibling.textContent = "Данное поле не заполнено";
+                } else  {
+                    elem.nextElementSibling.textContent = "";
                 }
             }
-            
         }
-    }
-    function formAddError(input) {
-        input.parentElement.classList.add('_error');
-        input.classList.add('_error');
-    }
-    function formRemoveError(input) {
-        input.parentElement.classList.remove('_error');
-        input.classList.remove('_error');
-    }
-
-    function emailTest(input) {
-        return !/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
-    }
+    });
 });
+
+
 
 
 

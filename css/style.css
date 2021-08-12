@@ -812,6 +812,7 @@ input::-webkit-search-results-decoration {
 
 .widget__body {
   margin-bottom: 34px;
+  color: #B0B0B0;
 }
 
 .widget__total {
@@ -824,6 +825,7 @@ input::-webkit-search-results-decoration {
           justify-content: space-between;
   margin-top: 43px;
   min-width: 417px;
+  color: #000;
 }
 
 .widget__total::after {
@@ -885,7 +887,28 @@ input::-webkit-search-results-decoration {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   max-width: 417px;
+}
+
+.checkbox__wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  min-width: 100px;
 }
 
 .checkbox + .checkbox {
@@ -925,6 +948,10 @@ input::-webkit-search-results-decoration {
   border: 0px solid #000;
 }
 
+.checkbox__real:checked + .checkbox__fake + .checkbox__wrapper {
+  color: #000;
+}
+
 .checkbox__fake {
   position: relative;
   display: inline-block;
@@ -946,7 +973,7 @@ input::-webkit-search-results-decoration {
   color: #524b8f;
 }
 
-.checkbox__real:checked ~ .checkbox__price {
+.checkbox__fake:checked ~ .checkbox___wrapper {
   color: red;
 }
 
